@@ -1,0 +1,177 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+      /* font-family: 'Montserrat', sans-serif; */
+
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+      :root {
+        --Very-dark-blue: hsl(212, 21%, 14%);
+        --Dark-grayish-blue: hsl(228, 12%, 48%);
+        --White: hsl(0, 0%, 100%);
+        --Dark-cyan: hsl(158, 36%, 37%);
+        --Cream: hsl(30, 38%, 92%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: var(--Cream);
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        /* height: 500px; */
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .crdimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* overflow: hidden; */
+        width: 50%;
+        /* height: 100%; */
+      }
+      .crdimg img {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+      }
+      .textcard {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        /* justify-self: flex-start; */
+        align-self: flex-start;
+        background: var(--White);
+        /* background: rgb(153, 15, 15); */
+        /* margin-top: 25px; */
+        padding: 45px;
+        width: 50%;
+        height: 100%;
+        /* align-items: center; */
+      }
+
+      /* .crdimg img:nth-last-child(1) {
+        display: none;
+      } */
+
+      .textcard p:nth-child(1) {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 3px;
+        color: var(--Dark-grayish-blue);
+      }
+      .textcard p:nth-child(2) {
+        font-size: 2rem;
+        font-family: "Fraunces", serif;
+      }
+      .textcard p:nth-child(3) {
+        font-size: 1rem;
+        margin: 10px 0;
+        color: var(--Very-dark-blue);
+        font-family: "Montserrat", sans-serif;
+      }
+      .textcard p:nth-child(4) {
+        font-size: 2rem;
+        font-family: "Fraunces", serif;
+        margin: 15px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--Dark-cyan);
+      }
+      span {
+        font-size: 15px;
+        color: var(--Dark-grayish-blue);
+      }
+      button {
+        background-color: var(--Dark-cyan);
+        border-radius: 4px;
+        border: none;
+        color: #ffffff;
+        font-size: 17px;
+        line-height: 100%;
+        margin: 0;
+        outline: 0;
+        padding: 11px 15px 12px;
+        font-weight: bold;
+        text-align: center;
+      }
+      button:hover {
+        background-color: hsl(158, 35%, 21%);
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="card">
+        <div class="crdimg">
+          <img src="./image-product-desktop.jpg" alt="" />
+          <!-- <img src="./images/image-product-mobile.jpg" alt="" /> -->
+        </div>
+        <div class="textcard">
+          <p>Parfum</p>
+          <p>
+            Gabrielle <br />
+            Essence Eau <br />
+            De Parfum
+          </p>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <p>
+            $149.99 &nbsp;&nbsp;<span><del>$169.99</del></span>
+          </p>
+          <button>
+            <img src="./icon-cart.svg" alt="" />
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
